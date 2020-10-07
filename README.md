@@ -1,4 +1,4 @@
-# red-black-tree-threaded
+# Red-Black Tree - threaded.
 Red-Black Tree in C/C++, threaded.
 Red Black Tree in C \(and C++), threaded, generic and with support 
 for multible trees on same node \(as a secondary 'index').
