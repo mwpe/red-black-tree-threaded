@@ -101,7 +101,7 @@ if( rc != 0 ) {} // error...
 int rc;
 myNode * oldnode;
 myNode * newnode = myNode_newNode( "key001", "data001" );
-rc = rbt_insert_keep( tree, newnode, &oldnode );
+rc = rbt_insert_keep( tree, newnode, (void**)&oldnode );
 if( rc != 0 ) {} // error...
 if( oldnode != NULL ) {
     printf("'%s' changed data from '%s' to '%s'\n",
