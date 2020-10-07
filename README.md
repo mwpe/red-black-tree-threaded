@@ -9,9 +9,9 @@ To build the library, in src directory, type:
 ```
 This build the librbt.a file.
 
-##Tutorial/how to:
+## Tutorial/how to:
 
-###Initial work
+### Initial work
 
 * Define your own node, add variables for the rbt_ functions \(2 pointers and a char per tree). Eg:
 ```c
@@ -85,7 +85,7 @@ t  = rbt_new( myNode_DEF );
 if ( t == NULL ) {} // error...
 ```
 
-###Insertion functions
+### Insertion functions
 
 * Inserting:
 
@@ -112,7 +112,7 @@ if( oldnode != NULL ) {
 }
 ```
 
-###Delete functions
+### Delete functions
 
 * delete a node \(by key)
 
@@ -137,7 +137,7 @@ rc = rbt_delnode_keep( t, node, &oldnode );
 // rc: -1==error, 0==ok, 1==not found..
 ```
 
-###Traversal functions
+### Traversal functions
 
 * search
 
@@ -193,7 +193,7 @@ for(node=node_sta ;node!=NULL;node=rbt_next(tree,node))
 }
 ```
 
-###Cleanup and freeing
+### Cleanup and freeing
 
 * Clear all nodes \(but not the tree itself).
 ```c
@@ -205,18 +205,17 @@ rbt_clr( tree )
 rbt_free( tree )
 ```
 
-## See also:
+## Samples:
 
-###The above as a samples c-file:
-
+* The above as a samples c-file:
 ```
 samples/sampRBTc01.c
 ```
 
-###Multible tree support example and C++ example:
+* Multible tree support example / C++ example:
 ```
 samples/sampRBTcpp01.cpp - multi tree in C++. 
 ```
 
-##Tested
+## Tested
    gcov
