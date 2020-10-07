@@ -80,9 +80,9 @@ RBTDEF * myNode_DEF = (RBTDEF[]) {{
 * Create a new rbt.
 
 ```c
-RBT * t;
-t  = rbt_new( myNode_DEF ); 
-if ( t == NULL ) {} // error...
+RBT * tree;
+tree  = rbt_new( myNode_DEF ); 
+if ( tree == NULL ) {} // error...
 ```
 
 ### Insertion functions
@@ -91,7 +91,7 @@ if ( t == NULL ) {} // error...
 
 ```c
 int rc;
-rc = rbt_insert( t, myNode_newNode( "key001", "data001" ) );
+rc = rbt_insert( tree, myNode_newNode( "key001", "data001" ) );
 if( rc != 0 ) {} // error...
 ```
 
@@ -101,7 +101,7 @@ if( rc != 0 ) {} // error...
 int rc;
 myNode * oldnode;
 myNode * newnode = myNode_newNode( "key001", "data001" );
-rc = rbt_insert_keep( t, newnode, &oldnode );
+rc = rbt_insert_keep( tree, newnode, &oldnode );
 if( rc != 0 ) {} // error...
 if( oldnode != NULL ) {
     printf("'%s' changed data from '%s' to '%s'\n",
@@ -130,10 +130,10 @@ if( rc == 1 ) {} // not found
 myNode * node;
 myNode * oldnode;
 ...
-rc = rbt_delkey_keep( t, "key001", &oldnode );
+rc = rbt_delkey_keep( tree, "key001", &oldnode );
 // delete by found node:
-rc = rbt_delnode( t, node );
-rc = rbt_delnode_keep( t, node, &oldnode );
+rc = rbt_delnode( tree, node );
+rc = rbt_delnode_keep( tree, node, &oldnode );
 // rc: -1==error, 0==ok, 1==not found..
 ```
 
